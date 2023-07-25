@@ -1,19 +1,24 @@
 import React from 'react'
-import { Navigate,Link } from 'react-router-dom';
+import { Navigate,Link, useNavigate } from 'react-router-dom';
 const Profile=()=>{
 
     const [goToProfile,setGoToProfile]=React.useState(false);
-    
+    const navigate=useNavigate();
     const handleClick=()=>{
       setGoToProfile(true);
       if(goToProfile){
-        return <Navigate to="/"/>;
+       // return <Navigate to="/"/>;
+       console.log(goToProfile);
+        navigate('/')
+        console.log('Redirecting to Login Page');
+
       }
     }
 
     return (
         <div>
-        <p>I am adarsh</p>
+        <h1>This is the Profile Page</h1>
+        <p>I am adarsh trying to learn react js concepts</p>
         <button onClick={handleClick}>Go To Login </button>
         </div>
     );

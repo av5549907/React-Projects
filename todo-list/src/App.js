@@ -17,6 +17,7 @@ import { Headr } from './Components/Headr';
  import { BrowserRouter as Router,Route,Routes,Switch,Link} from 'react-router-dom';
  import Profile from './Profile';
  import { Navigate } from 'react-router-dom';
+ 
 
 const product = [ 
   {name: 'Beginner to Advanced: React', type: 'Book', price: 1860},
@@ -33,6 +34,7 @@ function App() {
       <Router>
       <Routes>
         <Route  path="/" element={<Buttondes/>}/>
+        <Route path="/profile" element={<Profile/>}/>
         <Route path="/tasktable" element={<TaskTable/>}/>
         </Routes>
         </Router>
@@ -50,7 +52,8 @@ function App() {
     //   {/* <Product product={product}/> */}
     //    {/* <ProductForm/> */}
     //    {/* <BasicTable/> */}
-     //</div> 
+
+    //  </div> 
   // );
   );
 }
