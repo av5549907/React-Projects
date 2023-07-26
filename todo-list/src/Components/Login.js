@@ -1,11 +1,10 @@
 import React from 'react'; 
 import './Login.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-//import {faCircleChevronDown} from '@fortawesome/fontawesome-free-solid';
-import { faEnvelope } from '@fortawesome/fontawesome-free-solid';
-import { faLock } from '@fortawesome/fontawesome-free-solid';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLock }  from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 //import 'font-awesome/css/font-awesome.min.css';
-import { Navigate } from 'react-router-dom';
+//import { Navigate } from 'react-router-dom';
 
 const Login = () => {
     return (

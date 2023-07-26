@@ -1,33 +1,61 @@
 import React from "react";
-//
+
 import { useState } from "react";
-//import { TaskTable } from "./TaskTable";
-import { redirect } from "react-router-dom";
+
+
 import {
   BrowserRouter as Router,
   Route,
   Link,
   useNavigate,
 } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 import "./ButtonDesign.css";
-// import { TaskTable } from "./TaskTable";
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faLock }  from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+
 
 export const Buttondes = () => {
    const navigate=useNavigate();
   //const navigate=useNavigate();
   const [goToProfile, setGoToProfile] = useState(false);
+  // const [user,setUser]=useState("");
+  // const [pass,setPass]=useState("");
 
+  const [username, setusername] = useState("");
+  const [password, setpassword] = useState("");
+  const [authenticated, setauthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated")|| false));
+  const users = [{ username: "adarsh", password: "test" }];
+  const handleUser=(e)=>{
+    setusername(e.target.value);
+       console.log(username);
+  }
+  const handlePass=(e)=>{
+    setpassword(e.target.value);
+    console.log(password);
+}
   const handleClick = (e) => {
      e.preventDefault();
      console.log(e);
+     console.log("user : "+username);
+     console.log("Password : "+password);
+     const account = users.find((user) => user.username === username);
+    if (account && account.password === password) {
+        setauthenticated(true)
+        localStorage.setItem("authenticated", true);
+    }
+
     setGoToProfile(true);
+
     console.log(goToProfile);
-    if (goToProfile) {
+    console.log("authentiacated : "+authenticated);
+    if (goToProfile&&authenticated) {
       console.log("redirecting....");
          navigate('/profile');
          //navigate('/tasktable');
         console.log("Page redirected To Profile");
+    }else{
+      navigate('/');
     }
   };
 
@@ -44,18 +72,18 @@ export const Buttondes = () => {
             <label className="labelcls">Email</label>
           </div>
           <div>
-            <i className="fa fa-envelope email" />
-            <input type="text" placeholder="User Name" className="finput" />
+          <FontAwesomeIcon icon={faEnvelope}  className='email'/>
+            <input type="text" placeholder="Enter Your email" className="finput" onChange={handleUser} />
           </div>
           <div>
             <label className="labelcls">Password</label>
           </div>
           <div>
-            <i className="fa fa-lock pass"/>
+          <FontAwesomeIcon icon={faLock} className='pass' onChange={handlePass} />
             <a href="" className="acls">
               Forgot password?
             </a>
-            <input type="password" placeholder="Password" className="sinput" />
+            <input type="password" placeholder="Enter Password" className="sinput" />
           </div>
 
           <div>

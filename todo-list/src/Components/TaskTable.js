@@ -125,7 +125,7 @@ const handleSave = (index) => {
   );
   
     return (
-    <div className="container">
+    <div className="boxcontainer">
      <div><header style={{width:"100%",height:"50px",backgroundColor:"white"}}></header></div>
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <button onClick={toggleTable} className="openbtn">
