@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect,useState } from 'react';
-import { Navigate,Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
   const Profile=()=>{
 
   const [authenticated, setauthenticated] = useState(null);
@@ -21,6 +21,7 @@ import { Navigate,Link, useNavigate } from 'react-router-dom';
        console.log(goToProfile);
         navigate('/')
         console.log('Redirecting to Login Page');
+        console.log(authenticated);
       }
     }
 

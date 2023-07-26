@@ -4,9 +4,6 @@ import { useState } from "react";
 
 
 import {
-  BrowserRouter as Router,
-  Route,
-  Link,
   useNavigate,
 } from "react-router-dom";
 import "./ButtonDesign.css";
@@ -35,7 +32,7 @@ export const Buttondes = () => {
     console.log(password);
 }
   const handleClick = (e) => {
-     e.preventDefault();
+     //e.preventDefault();
      console.log(e);
      console.log("user : "+username);
      console.log("Password : "+password);
@@ -49,13 +46,17 @@ export const Buttondes = () => {
 
     console.log(goToProfile);
     console.log("authentiacated : "+authenticated);
+    let val=goToProfile&&authenticated;
+    console.log("result : "+val);
     if (goToProfile&&authenticated) {
       console.log("redirecting....");
          navigate('/profile');
-         //navigate('/tasktable');
+          //navigate('/tasktable');
         console.log("Page redirected To Profile");
     }else{
+      //alert("You have entered Wrong Username or Password");
       navigate('/');
+      //alert("You have entered Wrong Username or Password");
     }
   };
 
@@ -73,17 +74,17 @@ export const Buttondes = () => {
           </div>
           <div>
           <FontAwesomeIcon icon={faEnvelope}  className='email'/>
-            <input type="text" placeholder="Enter Your email" className="finput" onChange={handleUser} />
+            <input type="text" placeholder="User Name" className="finput" onChange={handleUser} />
           </div>
           <div>
             <label className="labelcls">Password</label>
           </div>
           <div>
-          <FontAwesomeIcon icon={faLock} className='pass' onChange={handlePass} />
-            <a href="" className="acls">
+          <FontAwesomeIcon icon={faLock} className='pass' />
+            <a href="https://www.abc.com" className="acls">
               Forgot password?
             </a>
-            <input type="password" placeholder="Enter Password" className="sinput" />
+            <input type="password" placeholder="Password" className="sinput" onChange={handlePass} />
           </div>
 
           <div>
@@ -95,7 +96,7 @@ export const Buttondes = () => {
           </div>
           </form>
           <div className="dcls">
-            <a href="">or login with SSO</a>
+            <a href="https://www.abc.com">or login with SSO</a>
           </div>
         </div>
       </div>
@@ -107,7 +108,7 @@ export const Buttondes = () => {
             "Lucida Sans Lucida Sans Regular Lucida Grande Lucida Sans Unicode",
         }}
       >
-        Don't have account? <a href="">Sign up</a>
+        Don't have account? <a href="https://www.abc.com">Sign up</a>
       </div>
     </>
   );

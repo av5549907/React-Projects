@@ -38,7 +38,7 @@ const Login = () => {
             </div>
         </div>
         </div>
-            <div>Don't have account? <a>Sign up</a></div>
+            <div>Don't have account? <a href="https://www.abc.com">Sign up</a></div>
         </div>
     );
 }
