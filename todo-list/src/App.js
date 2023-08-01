@@ -16,8 +16,12 @@ import  {Buttondes}  from './Components/Buttondes';
 //import { Headr } from './Components/Headr';
  import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
  import Profile from './Profile';
- 
- 
+ import Product from './Page/Product';
+ import About from './Page/About';
+ import Home from './Page/Home';
+ import Analytics from './Page/Analytics';
+import SideBar from './Page/SideBar';
+ import Header from './Page/Header';
 
 // const product = [ 
 //   {name: 'Beginner to Advanced: React', type: 'Book', price: 1860},
@@ -30,30 +34,45 @@ import  {Buttondes}  from './Components/Buttondes';
 function App() {
   return (
     
-      <div className="App">
-      <Router>
-      <Routes>
-        <Route  path="/" element={<Buttondes/>}/>
-        <Route path="/profile" element={<Profile/>}/>
-        <Route path="/tasktable" element={<TaskTable/>}/>
-        </Routes>
-        </Router>
-       </div>
-    // <div className="App">
-    //    {/* <Buttondes/> */}
-    //   <TaskTable/>
-    //   {/* <Headr/>
-    //   <Buttondes/> */}
-    //    {/* <Login/> */}
-    //   {/*} <Message/> */}
-    //    {/* <ClickHandler/> */}
-    //    {/* <ParentComponent/> */}
-    //    {/* <Form/> */}
-    //   {/* <Product product={product}/> */}
-    //    {/* <ProductForm/> */}
-    //    {/* <BasicTable/> */}
+      // <div className="App">
+      // <Router>
+      // <Routes>
+      //   <Route  path="/" element={<Buttondes/>}/>
+      //   <Route path="/profile" element={<Profile/>}/>
+      //   <Route path="/tasktable" element={<TaskTable/>}/>
+      //   </Routes>
+      //   </Router>
+      //  </div>
+      // <div className="App">
+      // <Router>
+      // <SideBar>
+      // <Routes>
+      //    <Route path='/' element={<Home/>}/>
+      //    <Route path='/home' element={<Home/>}/>
+      //    <Route path='/about' element={<About/>}/>
+      //    <Route path='/product' element={<Product/>}/>
+      //    <Route path='/analytics' element={<Analytics/>}/>
+      //   </Routes>
+      //   </SideBar>
+      //   </Router>
+      //  </div>
+    <div className="App">
+       {/* <Buttondes/> */}
+       {/* <Header/> */} 
+      <SideBar/>
+      {/* <TaskTable/> */}
+      {/* <Headr/>
+      <Buttondes/> */}
+       {/* <Login/> */}
+      {/*} <Message/> */}
+       {/* <ClickHandler/> */}
+       {/* <ParentComponent/> */}
+       {/* <Form/> */}
+      {/* <Product product={product}/> */}
+       {/* <ProductForm/> */}
+       {/* <BasicTable/> */}
 
-    //  </div> 
+     </div> 
   //);
   );
 }

@@ -16,9 +16,7 @@ export const Buttondes = () => {
    const navigate=useNavigate();
   //const navigate=useNavigate();
   const [goToProfile, setGoToProfile] = useState(false);
-  // const [user,setUser]=useState("");
-  // const [pass,setPass]=useState("");
-
+ 
   const [username, setusername] = useState("");
   const [password, setpassword] = useState("");
   const [authenticated, setauthenticated] = useState(localStorage.getItem(localStorage.getItem("authenticated")|| false));
@@ -34,8 +32,8 @@ export const Buttondes = () => {
   const handleClick = (e) => {
      //e.preventDefault();
      console.log(e);
-     console.log("user : "+username);
-     console.log("Password : "+password);
+    //  console.log("user : "+username);
+    //  console.log("Password : "+password);
      const account = users.find((user) => user.username === username);
     if (account && account.password === password) {
         setauthenticated(true)
@@ -50,8 +48,8 @@ export const Buttondes = () => {
     console.log("result : "+val);
     if (goToProfile&&authenticated) {
       console.log("redirecting....");
-         navigate('/profile');
-          //navigate('/tasktable');
+         //navigate('/profile');
+          navigate('/tasktable');
         console.log("Page redirected To Profile");
     }else{
       //alert("You have entered Wrong Username or Password");

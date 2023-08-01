@@ -4,19 +4,23 @@ import { useTable, usePagination } from "react-table";
 import ABC_DATA from './ABC_DATA.json'
 import { column } from './column';
 import './table.css';
-//import { Navigate } from "react-router-dom";
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-//import { Form } from './AddData';
+import {  faCircleChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import { faLock } from "@fortawesome/free-solid-svg-icons";
+import classNames from "classnames";
 
-export const TaskTable = () => {
+export const TaskTable = (props) => {
+  const {collapsed}=props;
   const [isTableCollapsed, setTableCollapsed] = useState(false);
   const [tableData, setTableData] = useState([]);
+  const [isSideBarOpen,setSideBarOpen]=useState(false);
   //const [tableData, setTableData] = useState();
 
   // Function to toggle the visibility of the table.
   const toggleTable = () => {
     setTableCollapsed(!isTableCollapsed);
   };
+
 
   // Function to add a new row to the table.
   const addRow = () => {
@@ -124,21 +128,19 @@ const handleSave = (index) => {
     usePagination
   );
   
+
     return (
-    <div className="boxcontainer">
-     <div><header style={{width:"100%",height:"50px",backgroundColor:"white"}}></header></div>
-      <div style={{ display: 'flex', alignItems: 'center' }}>
+      <>
+      <div className={classNames('boxcontainer',!collapsed&&'boxcontainer1')}>
+       <div style={{ display: 'flex', alignItems: 'center' }}>
         <button onClick={toggleTable} className="openbtn">
-        {/* <FontAwesomeIcon icon="fa-solid fa-circle-chevron-down" /> */}
+        <FontAwesomeIcon icon={faCircleChevronDown} />
           {isTableCollapsed ? 'Open' : 'Close'}
         </button>
-        {/* {isTableCollapsed && (
-          <p style={{ marginLeft: '10px' }}>{data.length} rows</p>
-        )} */}
-      </div>
+       </div>
       {/* Render the table and pagination only if it is not collapsed */}
       {!isTableCollapsed && (
-        <div  style={{ display: 'inline', flexDirection: 'column', fillOpacity: 'unset' }}>
+        <div>
           <table {...getTableProps()}>
             <thead>
               {headerGroups.map((headerGroup) => (
@@ -241,6 +243,7 @@ const handleSave = (index) => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

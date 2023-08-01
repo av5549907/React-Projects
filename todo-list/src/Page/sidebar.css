@@ -1,0 +1,115 @@
+/* styles.css (or any other CSS file) */
+/* General styles for the sidebar */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: rgb(247, 245, 245);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+  }
+  
+  /* Collapsed state */
+  .sidebar.collapsed {
+    visibility: collapse;
+  }
+  
+  /* Styles for the header and main content area */
+  .header {
+    background-color: #444;
+    color: #fff;
+    height: 60px;
+    padding: 10px;
+    transition: margin-left 0.3s ease;
+  }
+/*   
+  .main {
+    margin-left: 250px;
+    /* padding: 20px;
+    transition: margin-left 0.3s ease; 
+  } */
+  
+  /* Collapsed state */
+  .collapsed .header,
+  .collapsed .main {
+    margin-left: 0px;
+  }
+  
+  .ul1{
+    list-style-type:none;
+    /* background: linear-gradient(45deg,rgb(239, 237, 240),white); */
+    background-color: rgb(247, 245, 245);
+  }
+  header{
+    position: relative;
+    background-color: white;
+    /* height: 10%; */
+    width:100%;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .ul1 li{
+    height: 30px;
+    display: block;
+    justify-content:start;
+    color: black;
+  }
+  .ul2{
+    height: 50px;
+    margin-left:15%;
+  }
+  .ul21{
+    height: 50px;
+    margin-left:0;
+    
+  }
+ 
+
+.sidebar input{
+    width:40%;
+    height:30px;
+    border-radius:10px;
+    background-color: #fdf9f9;
+    
+}
+.sidebar.collapsed input{
+    visibility: collapse;
+}
+.sidebar.collapsed button{
+    visibility: collapse;
+}
+.sidebar.collapsed ul{
+    visibility: collapse;
+}
+.sidebar button{
+    background-color: #fff;
+}
+
+.tglbtn{
+ display:flex;
+ width:2px;
+ background-color: white;
+ justify-content: start;
+ /* padding:30px 0 0 0; */
+ position:absolute;
+}
+
+.ulcontain{
+    display:flex inline;
+    justify-content: start;
+    margin-left: 50px;
+
+}
+.ulcontain div{
+margin-left: 10px;
+
+}
+.search{
+    /* background-color: black; */
+    color: #444;
+}
