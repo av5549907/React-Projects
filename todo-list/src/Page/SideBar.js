@@ -23,6 +23,7 @@ const Sidebar = () => {
     <>
     <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
       {/* <button onClick={handleToggleSidebar} className="toggle-btn"> */}
+      {/* <div className='logo'><img src='/Users/bihaa/Desktop/React Project/todo-list/src/Page/clickup.jpg'  width='40px' height='40px'/></div> */}
       <FontAwesomeIcon icon={faSearch} className="email search"/> <input type="text" placeholder='Search'/>
         {/* <span>{collapsed ? <FontAwesomeIcon icon={faAngleDoubleRight}/> : <FontAwesomeIcon icon={faAngleDoubleLeft}/>}</span> */}
       {/* </button> */}
@@ -37,11 +38,6 @@ const Sidebar = () => {
         <span>{collapsed ? <FontAwesomeIcon icon={faAngleDoubleRight} className='search'/> : <FontAwesomeIcon icon={faAngleDoubleLeft}/>}</span>
       </button>
       <div className='ulcontain'>
-       {/* <ul>
-        <li><FontAwesomeIcon icon={faList}/>List</li>
-        <li><FontAwesomeIcon icon={faFileClipboard}/>Board</li>
-        <li><FontAwesomeIcon icon={faPlus}/>View</li>
-       </ul> */}
        <div><FontAwesomeIcon icon={faList}/>List  </div>
        <div><FontAwesomeIcon icon={faFileClipboard}/>Board  </div>
        <div><FontAwesomeIcon icon={faPlus}/>View </div>

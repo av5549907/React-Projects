@@ -3,13 +3,14 @@
 .sidebar {
     width: 250px;
     height: 100%;
-    background-color: rgb(247, 245, 245);
-    color: #fff;
+    background-color:white;
+    color: black;
     position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     transition: width 0.3s ease;
+    border:1px solid #444 ;
   }
   
   /* Collapsed state */
@@ -41,7 +42,7 @@
   .ul1{
     list-style-type:none;
     /* background: linear-gradient(45deg,rgb(239, 237, 240),white); */
-    background-color: rgb(247, 245, 245);
+    background-color:white
   }
   header{
     position: relative;
@@ -55,9 +56,12 @@
   }
   .ul1 li{
     height: 30px;
-    display: block;
+    /* display: block; */
+    display: flex;
     justify-content:start;
     color: black;
+    align-items: left;
+    /* background-color: white; */
   }
   .ul2{
     height: 50px;
@@ -71,8 +75,8 @@
  
 
 .sidebar input{
-    width:40%;
-    height:30px;
+    width:60%;
+    height:28px;
     border-radius:10px;
     background-color: #fdf9f9;
     
@@ -112,4 +116,7 @@ margin-left: 10px;
 .search{
     /* background-color: black; */
     color: #444;
+}
+.logo{
+  background:url('/Users/bihaa/Desktop/React Project/todo-list/src/Page/clickup.jpg')
 }

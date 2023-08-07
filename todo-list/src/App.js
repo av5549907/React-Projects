@@ -20,8 +20,11 @@ import  {Buttondes}  from './Components/Buttondes';
  import About from './Page/About';
  import Home from './Page/Home';
  import Analytics from './Page/Analytics';
-import SideBar from './Page/SideBar';
+ import SideBar from './Page/SideBar';
  import Header from './Page/Header';
+ import { Provider } from 'react-redux';
+ import store from './CakeProject/Cake/store';
+ import CakeContainer from './CakeProject/CakeContainer';
 
 // const product = [ 
 //   {name: 'Beginner to Advanced: React', type: 'Book', price: 1860},
@@ -33,7 +36,14 @@ import SideBar from './Page/SideBar';
 
 function App() {
   return (
-    
+    <Provider store={store}>
+    {/* <Provider store={dataStore}> */}
+   <div className="App">
+    {/* <Counter/> */}
+    <CakeContainer/>
+    {/* <Container/> */}
+   </div>
+   </Provider>
       // <div className="App">
       // <Router>
       // <Routes>
@@ -56,23 +66,23 @@ function App() {
       //   </SideBar>
       //   </Router>
       //  </div>
-    <div className="App">
-       {/* <Buttondes/> */}
-       {/* <Header/> */} 
-      <SideBar/>
-      {/* <TaskTable/> */}
-      {/* <Headr/>
-      <Buttondes/> */}
-       {/* <Login/> */}
-      {/*} <Message/> */}
-       {/* <ClickHandler/> */}
-       {/* <ParentComponent/> */}
-       {/* <Form/> */}
-      {/* <Product product={product}/> */}
-       {/* <ProductForm/> */}
-       {/* <BasicTable/> */}
+    // <div className="App">
+    //    {/* <Buttondes/> */}
+    //    {/* <Header/> */} 
+    //   <SideBar/>
+    //   {/* <TaskTable/> */}
+    //   {/* <Headr/>
+    //   <Buttondes/> */}
+    //    {/* <Login/> */}
+    //   {/*} <Message/> */}
+    //    {/* <ClickHandler/> */}
+    //    {/* <ParentComponent/> */}
+    //    {/* <Form/> */}
+    //   {/* <Product product={product}/> */}
+    //    {/* <ProductForm/> */}
+    //    {/* <BasicTable/> */}
 
-     </div> 
+    //  </div> 
   //);
   );
 }
