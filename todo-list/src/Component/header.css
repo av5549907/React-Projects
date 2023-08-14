@@ -1,0 +1,30 @@
+.btnarr{
+    opacity: 0.3;
+    backface-visibility: hidden;
+
+}
+
+ .nav{
+    margin-left: 50px;
+   }
+
+   .header{
+    width: 100%;
+    background-color:rgb(204, 248, 248);
+    color: #151414;
+    padding: 1%;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .header1{
+    width: 85%;
+    background-color:rgb(204, 248, 248);
+    color: #151414;
+    padding: 1%;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 15%;
+  }

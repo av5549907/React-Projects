@@ -1,0 +1,120 @@
+
+.container{
+    height: 310px;
+    width: 350px;
+    display: flex;
+     margin-left: 40%;
+     margin-top: 20%;
+     background-color:white;
+     border-radius: 10px;
+     opacity: 0.8;
+     box-shadow: 11px 12px 13px 11px rgb(207, 207,207);
+ }
+
+input[type=text]{
+    width: 250px;
+    height: 38px;
+    border-radius: 10px;
+    /* box-shadow: inset 0px 0px 25px 0px;  */
+    padding: 0 20px 0 35px;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid rgb(189, 187, 187);
+}
+input[type=password]{
+    width: 250px;
+    height: 38px;
+    border-radius: 10px;
+    /* box-shadow: inset 0px 0px 25px 0px;  */
+    padding: 0 20px 0 35px;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid rgb(189, 187, 187);
+    
+}
+.btn{
+    
+    margin-left: 8%;
+    width: 5vw;
+    height: 3vh;
+    border-color: red;
+    background-color:red;
+    position: absolute;
+    top:55%;
+    text-align: center;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    font-size: 20px;
+    min-height:30px; 
+    min-width: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    resize: vertical;
+    
+}
+.btn:hover {
+    background-color:rgb(54, 243, 7);
+    transition: 0.7s;
+}
+.buttoncls{
+    width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 25px 0px;
+    margin-top: 30px;
+    
+    background-color:blue;
+}
+.buttoncls:hover{
+    background-color:rgb(16, 224, 51);
+    transition: 0.7s;
+}
+
+h1{
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    font-weight: 100;
+    margin-top: 20px;
+   
+}
+
+.labelcls{
+    font-size: 12px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    display: flex;
+    justify-self: start;
+    position: relative;
+    padding: 10px 0 0 10px;
+
+}
+
+.acls{
+    padding: 20px 0 0 0;
+    position: absolute;
+    font-size: 10px;
+    width:100px;
+    margin-left: 200px;
+}
+.email{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    padding: 12px 0 0 10px;
+   
+}
+.pass{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    padding: 12px 0 0 10px;
+   
+}
+.dcls{
+    font-size: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    justify-content: center;
+    display: flex;
+}

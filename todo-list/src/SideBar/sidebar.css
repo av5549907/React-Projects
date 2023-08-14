@@ -1,0 +1,120 @@
+/* styles.css (or any other CSS file) */
+/* General styles for the sidebar */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color:white;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+    border:0.001px solid #444 ;
+  }
+  
+  /* Collapsed state */
+  .sidebar.collapsed {
+    visibility: collapse;
+  }
+  
+  
+  /* Styles for the header and main content area */
+  
+/*   
+  .main {
+    margin-left: 250px;
+    /* padding: 20px;
+    transition: margin-left 0.3s ease; 
+  } */
+  
+  /* Collapsed state */
+  .collapsed .header,
+  .collapsed .main {
+    margin-left: 0px;
+  }
+  
+  .ul1{
+    list-style-type:none;
+    /* background: linear-gradient(45deg,rgb(239, 237, 240),white); */
+    background-color:white
+  }
+ 
+  .ul1 li{
+    height: 30px;
+    /* display: block; */
+    display: flex;
+    justify-content:center;
+    color: black;
+    align-items: right;
+    /* background-color: white; */
+  }
+ 
+  .searchinput{
+    display: flex;
+    top: 100px;
+  }
+ 
+
+.sidebar input{
+    width:80%;
+    height:28px;
+    border-radius:10px;
+    background-color: #fdf9f9;
+    padding-left: 30px;
+    margin-top: 50px;
+    
+}
+.sidebar.collapsed input{
+    visibility: collapse;
+}
+.sidebar.collapsed.tglbtn{
+    visibility: collapse;
+}
+.sidebar.collapsed ul{
+    visibility: collapse;
+}
+.sidebar button{
+    background-color: #fff;
+}
+
+.tglbtn{
+ display:flex;
+ width:2px;
+ background-color: white;
+ position:absolute;
+}
+.tglbtn.collapsed{
+    visibility:visible;
+}
+.ulcontain{
+    display:flex inline;
+    justify-content: start;
+    margin-left: 50px;
+
+}
+.ulcontain div{
+margin-left: 10px;
+
+}
+.search{
+    color: #444;
+    position: absolute;
+    padding: 5px 50px 10px 10px;
+    margin-top: 50px;
+}
+.logo{
+  background:url('/Users/bihaa/Desktop/React Project/todo-list/src/Page/clickup.jpg')
+}
+.menu{
+    margin-top: 20px;
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 0.01px rgb(96, 95, 95);
+    border-top:solid 0.01px rgb(96, 95, 95);;
+    margin-left: 60%;
+}
+.aside{
+    visibility: collapse;
+}

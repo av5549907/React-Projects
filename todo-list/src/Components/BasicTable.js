@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, {useMemo, useState } from "react";
 import { useTable, usePagination } from "react-table";
 import { column } from './column';
 import MOCK_DATA from './MOCK_DATA.json';
@@ -7,14 +7,7 @@ import './table.css';
 
 export const BasicTable = () => {
   const [isTableCollapsed, setTableCollapsed] = useState(false);
-  //const [tableData, setTableData] = useState(MOCK_DATA);
   const [tableData, setTableData] = useState([]);
-
-  
-// useEffect(() => {
-//     MOCK_DATA = [...MOCK_DATA,...tableData];
-//     setTableData(MOCK_DATA);
-// }, [MOCK_DATA]);
 
   // Function to toggle the visibility of the table.
   const toggleTable = () => {
@@ -25,7 +18,6 @@ export const BasicTable = () => {
   const addRow = () => {
     const newTableData = [
       ...tableData,
-    //   { first_name: '', last_name: '', email: '', gender: '', isEditing: true }
     { first_name: '', last_name: '', email: '', gender: ''}
     ];
     setTableData(newTableData);
@@ -42,9 +34,6 @@ export const BasicTable = () => {
   const handleSave = (index) => { 
     const rowData = tableData[index];
     console.log('Saving data:', rowData);
-     
-        // Write the updated data back to the JSON file
-    //    MOCK_DATA = [...MOCK_DATA,...tableData];
     rowData["isEditing"]=false;
     MOCK_DATA = [...MOCK_DATA,rowData];
       setTableData(MOCK_DATA);
@@ -93,11 +82,7 @@ export const BasicTable = () => {
         <button onClick={toggleTable} className="openbtn">
           {isTableCollapsed ? 'Close':'Open'}
         </button>
-        {/* {isTableCollapsed && (
-          <p style={{ marginLeft: '10px' }}>{data.length} rows</p>
-        )} */}
       </div>
-      {/* Render the table and pagination only if it is not collapsed */}
       {!isTableCollapsed && (
         <div  style={{ display: 'inline', flexDirection: 'column', fillOpacity: 'unset' }}>
           <table {...getTableProps()}>
@@ -114,7 +99,6 @@ export const BasicTable = () => {
             <tbody {...getTableBodyProps()}>
               {page.map((row, index) => {
                 prepareRow(row);
-                //const rowData = row.original;
                 return (
                   <tr {...row.getRowProps()}>
                     <td>
@@ -177,7 +161,6 @@ export const BasicTable = () => {
           </div>
           <div><footer style={{width:"100%",height:"50px",backgroundColor:"white"}}></footer></div>
           <div style={{ textAlign: 'center' }}>
-            {/* <p>{data.length} rows</p> */}
             <div>
               <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
                 {'<<'}

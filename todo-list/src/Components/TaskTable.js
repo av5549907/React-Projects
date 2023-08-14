@@ -149,6 +149,7 @@ const handleSave = (index) => {
                   {headerGroup.headers.map((column) => (
                     <th {...column.getHeaderProps()}>{column.render('Header')}</th>
                   ))}
+                  <th>Actions</th>
                 </tr>
               ))}
             </thead>
@@ -164,6 +165,8 @@ const handleSave = (index) => {
                     {row.cells.map((cell) => {
                       return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>;
                     })}
+                    
+                    <td><button>Edit</button>||<button>Delete</button></td>
                   </tr>
                 );
               })}
@@ -246,5 +249,6 @@ const handleSave = (index) => {
     </>
   );
 };
+
 
 

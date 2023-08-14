@@ -5,10 +5,7 @@ export const NewProduct=(props)=>{
     const saveProductDataHandler=(enteredData)=>{
         props.onAddProduct(enteredData)
     }
-
-    return (
-        <>
-            <ProductForm onSaveProductData={saveProductDataHandler}/>
-        </>
+    return(
+      <ProductForm onSaveProductData={saveProductDataHandler}/>
     )
 }

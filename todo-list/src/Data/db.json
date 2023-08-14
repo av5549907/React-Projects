@@ -1,0 +1,81 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "name": "Adarsh",
+      "role": "Intern",
+      "email": "ad@in.pega.com",
+      "phone": "9876543210"
+    },
+    {
+      "id": 2,
+      "name": "Pooja S",
+      "email": "ps@in.pega.com",
+      "phone": "9876543210",
+      "role": "Mentor"
+    },
+    {
+      "id": 3,
+      "name": "Sakthi Vickraman",
+      "email": "sv.admin@in.pega.com",
+      "phone": "9876543210",
+      "role": "Manager"
+    },
+    {
+      "id": 4,
+      "name": "Sujesh Sudarshan",
+      "email": "ss@in.pega.com",
+      "phone": "7899007656",
+      "role": "Mentor"
+    },
+    {
+      "id": 5,
+      "name": "Kripa Shankar",
+      "email": "test@gmail.com",
+      "phone": "9000002221",
+      "role": "Intern"
+    },
+    {
+      "name": "Sachin tendulkar",
+      "email": "srt@gmail.com",
+      "phone": "6728292626",
+      "role": "Intern",
+      "id": 6
+    },
+    {
+      "name": "agaha",
+      "email": "ybjs",
+      "phone": "738292",
+      "role": "Intern",
+      "id": 8
+    },
+    {
+      "name": "vahah",
+      "email": "hwjjw3445",
+      "phone": "332q232",
+      "role": "Intern",
+      "id": 11
+    },
+    {
+      "name": "adarsh",
+      "email": "ap@gmail.com",
+      "phone": "6745321289",
+      "role": "Intern",
+      "id": 14
+    },
+    {
+      "name": "Garima",
+      "email": "sg@gmail.com",
+      "phone": "5722829867",
+      "role": "Intern",
+      "id": 15
+    },
+    {
+      "name": "Saurav",
+      "email": "sv@iitjammu.ac.in",
+      "phone": "7856432145",
+      "role": "Manager",
+      "id": 16
+    }
+  ]
+}

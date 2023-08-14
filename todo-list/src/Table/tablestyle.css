@@ -1,0 +1,79 @@
+.tablecls{ 
+    display: flex;
+    justify-content: center;
+
+}
+table{
+border-collapse: collapse;
+    width: 60%;
+    background-color: white;
+}
+
+table th{
+   align-items: start;
+   height: 20px;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   color: black;
+   font-size: 15px;
+   text-align: left;
+   background-color: rgb(246, 244, 241);
+}
+table tr td{
+    border-bottom: 1pt solid rgb(247, 242, 242);
+    height: 30px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: left;
+}
+
+.openclosebtn{
+    width:100px;
+    height:40px;
+    background-color:aqua;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5%;
+    margin-top: 0px;
+    padding: 2px 2px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.btnstyle{
+    display: flex;
+    margin-left: 19.5%;
+
+}
+
+.tdbtn{
+    text-align: center;
+}
+.thbtn1{
+    text-align: left;
+    color:black;
+}
+.tdname{
+   padding: 5px;
+}
+.btncolor{
+    color: black;
+}
+.main1{
+    width:100%;
+    margin-left:0%;
+    margin-top: 5%;
+}
+.main {
+    margin-left: 20%;
+    /* transition: margin-left 0.3s ease;  */
+    width:80%;
+    margin-top:5%;
+  }
+
+  .seachinput{
+    margin-top: 100px;
+  }

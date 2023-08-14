@@ -9,7 +9,7 @@ import { faAngleDoubleLeft,
      } from '@fortawesome/free-solid-svg-icons';
 import classNames from 'classnames';
  
-import { TaskTable } from '../Components/TaskTable';
+// import { TaskTable } from '../Components/TaskTable';
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -22,13 +22,8 @@ const Sidebar = () => {
   return (
     <>
     <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
-      {/* <button onClick={handleToggleSidebar} className="toggle-btn"> */}
-      {/* <div className='logo'><img src='/Users/bihaa/Desktop/React Project/todo-list/src/Page/clickup.jpg'  width='40px' height='40px'/></div> */}
       <FontAwesomeIcon icon={faSearch} className="email search"/> <input type="text" placeholder='Search'/>
-        {/* <span>{collapsed ? <FontAwesomeIcon icon={faAngleDoubleRight}/> : <FontAwesomeIcon icon={faAngleDoubleLeft}/>}</span> */}
-      {/* </button> */}
       <ul className='ul1'>
-        {/* Add your sidebar menu items here */}
         <li><FontAwesomeIcon icon={faHome}/> Home</li>
         <li><FontAwesomeIcon icon={faListAlt}/> List</li>
       </ul>
@@ -39,11 +34,11 @@ const Sidebar = () => {
       </button>
       <div className='ulcontain'>
        <div><FontAwesomeIcon icon={faList}/>List  </div>
-       <div><FontAwesomeIcon icon={faFileClipboard}/>Board  </div>
+       <div><FontAwesomeIcon icon={faFileClipboard}/>Board </div>
        <div><FontAwesomeIcon icon={faPlus}/>View </div>
        </div>
         </header>
-        <TaskTable collapsed={collapsed}/>
+        {/* <TaskTable collapsed={collapsed}/> */}
         </>
   );
 };
