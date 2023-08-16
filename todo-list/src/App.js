@@ -12,8 +12,6 @@ import Header from './Component/Header';
 
 
 function App() {
-  //const [collapsedbtn,setCollapsed]=useState(false)
- // const collapsedbtn=false;
   return (
     <Provider store={Store}>
     <div className="App">
