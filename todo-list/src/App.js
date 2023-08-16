@@ -8,18 +8,21 @@ import { ToastContainer } from 'react-toastify';
 import { Provider } from 'react-redux';
 import Store from './Redux/Store';
 import Sidebar from './SideBar/Sidebar';
-import Header from './SideBar/Header';
+import Header from './Component/Header';
+
+
 function App() {
+  //const [collapsedbtn,setCollapsed]=useState(false)
+ // const collapsedbtn=false;
   return (
     <Provider store={Store}>
     <div className="App">
       <Router>
-       {/* <Sidebar/> */}
+       <Sidebar/>
        <Header/>
         <Routes>
           <Route path='/' element={<Home></Home>}></Route>
-          {/* <Route path='/user' element={<Header></Header>}></Route> */}
-          <Route path='/user' element={<Userlisting></Userlisting>}></Route>
+          <Route path='/user' element={<Userlisting ></Userlisting>}></Route>
           <Route path='/user/add' element={<Adduser></Adduser>}></Route>
           <Route path='/user/edit/:code' element={<Updateuser></Updateuser>}></Route>
         </Routes>

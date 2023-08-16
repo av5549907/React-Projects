@@ -1,7 +1,7 @@
 import axios from "axios"
 import { toast } from "react-toastify"
 import Updateuser from "../Component/Updateuser"
-import { ADD_USER, DELETE_USER, FAIL_REQUEST, GET_USER_LIST, GET_USER_OBJ, MAKE_REQUEST, UPDATE_USER ,GET_COLLAPSED} from "./ActionType"
+import { ADD_USER, DELETE_USER, FAIL_REQUEST, GET_USER_LIST, GET_USER_OBJ, MAKE_REQUEST, UPDATE_USER ,BUTTON_CLICKED} from "./ActionType"
 
 export const makeRequest=()=>{
     return{
@@ -43,10 +43,9 @@ export const getUserObj=(data)=>{
         payload:data
     }
 }
-export const getCollapsed=(data)=>{
+export const buttonClicked=()=>{
   return{
-    type:GET_COLLAPSED,
-    payload:!data
+    type:BUTTON_CLICKED
   }
 }
 
@@ -123,4 +122,6 @@ export const FetchUserObj=(code)=>{
      // }, 2000);
      
     }
+  
 }
+

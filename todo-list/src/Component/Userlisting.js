@@ -7,17 +7,14 @@ import '../Table/tablestyle.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronDown,faEdit, faTrashAlt} from "@fortawesome/free-solid-svg-icons";
 import Pagination from "../Table/Pagination";
-import { faListAlt,faFileClipboard,faPlus,faAngleDoubleLeft,faAngleDoubleRight} from "@fortawesome/free-solid-svg-icons"
 import './header.css'
 import classNames from "classnames";
-// import Header from "../SideBar/Header";
-// import { collapsed } from "../SideBar/Header";
 
 
 
 const itemsPerPage = 10;
 
-const Userlisting = (props,collapsedbtn) => {
+const Userlisting = (props) => {
     useEffect(() => {
          props.loaduser() 
         }, [])
@@ -28,6 +25,7 @@ const Userlisting = (props,collapsedbtn) => {
              toast.success('User removed successfully.')
         }
     }
+    console.log("userlisting : "+props.collapsedbtn)
    
   const [toggleTable,setToggleTable]=useState(true)  ;
   const [currentPage, setCurrentPage] = useState(1);
@@ -58,14 +56,12 @@ const Userlisting = (props,collapsedbtn) => {
   const handleToggle=()=>{
     setToggleTable(!toggleTable)
   }
-  const {collapsedbtns}=collapsedbtn;
-  console.log("collapsed userlisting : "+{collapsedbtns})
 
     return (
         props.user.loading ? <div><h2>Loading...</h2></div> :
             props.user.errmessage ? <div><h2>{props.user.errmessage}</h2></div> :
         
-                <div className={classNames('main',!collapsedbtns&&'main1')}>
+                <div className={classNames('main',!props.collapsedbtns&&'main1')}>
                   <div className="btnstyle">
                     <button onClick={handleToggle} className="btn"><FontAwesomeIcon icon={faCircleChevronDown}/>{toggleTable? 'Close': 'Open'}</button>
                    </div>
